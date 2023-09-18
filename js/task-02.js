@@ -9,9 +9,9 @@ const ingredients = [
 
 const listItems = [];
 
-for (let i = 0; i < images.length; i++) {
+for (let i = 0; i < ingredients.length; i++) {
   const newItem = document.createElement('li');
-  newItem.innerText = images[i];
+  newItem.innerText = ingredients[i];
   newItem.classList.add('item');
   listItems.push(newItem);
 }
