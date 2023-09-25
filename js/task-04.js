@@ -1,7 +1,22 @@
-const counterValue = 0;
+let counterValue = 0;
 
-const increaseBtn = document.querySelectorAll("button");
+const decreaseBtn = document.querySelector('button[data-action="decrement"]');
+const increaseBtn = document.querySelector('button[data-action="increment"]');
+
+const counterValueElement = document.getElementById('value');
+
+function updateCounterValue() {
+    counterValueElement.textContent = counterValue;
+}
+
+decreaseBtn.addEventListener('click', () => {
+    counterValue -= 1;
+    updateCounterValue();
+});
 
 increaseBtn.addEventListener("click", () => {
-  console.log("Increase Button was clicked");
+    counterValue += 1;
+    updateCounterValue();
 });
+
+updateCounterValue();
